@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename={process.env.PUBLIC_URL}> {/* BrowserRouter로 App 감싸기 */}
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
